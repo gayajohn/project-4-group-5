@@ -1,5 +1,3 @@
-# project-4-group-5
-
 # Stock Price Prediction with Machine Learning
 
 ## Objective
@@ -30,9 +28,57 @@ We will procure publicly available stock information directly from Yahoo Finance
 
 - Final Model Selection: Choose the model with the best overall performance after hyperparameter tuning.
 
+## Data Procurement:
+
+[Data Procurement](https://github.com/gayajohn/project-4-group-5/blob/jasmine/data_procurement%20-%20JB.ipynb)
+
+**1. Ticker List Generation**
+
+- Created a list of tickers from the NASDAQ screener, including only American stocks categorized as mega, large, and mid-cap.
+
+**2. Random Date Generation**
+
+- Implemented a function to generate a random date within a given time period.
+
+**3. Random Stock Selection**
+
+- Developed a function to randomly choose a stock from the generated ticker list.
+
+**4. Stock Data Availability Check**
+
+- Implemented a function to check if data is available for a given stock using the Yahoo Finance API. Further code enhancements are in progress.
+
+**5. Stock Industry Retrieval**
+
+- Created a function to return the industry of a stock using information from the NASDAQ CSV.
+
+**6. Stock Price Retrieval**
+
+- Implemented a function to get the stock price for a given date using the Yahoo Finance API.
+
+**7. Weekly Returns Loop**
+
+- Established a loop to calculate and retrieve weekly returns for selected stocks.
+
+**8. Stock Volume Retrieval**
+
+- Developed a function to obtain stock volume for the last 4 weekdays using the Yahoo Finance API. This facilitates the retrieval of trading volume for the last 5 business days.
+
+**9. Stock Financials Retrieval**
+
+- Implemented a function to scrape financial data from stockanalysis.com, focusing on annual and quarterly financial statements and financial ratios. The function selects the closest previous quarterly report.
+
+**10. Stock Volatility Calculation**
+
+- Created a function to calculate stock volatility using historical price data up to the generated date. Utilizes the Yahoo Finance API for data retrieval.
+
+## Data Exploration 
+
+[Data Exploration]()
+
 ## Repository Structure
 - data_procurement.ipynb: Python script to fetch and collect data from Yahoo Finance.
-- feature_engineering.py: Perform feature engineering to enhance the dataset for machine learning.
+- data_exploration: Jupyter notebook focused on exploring the collected financial data.
 - model_training.py: Implement and train multiple machine learning models.
 - model_evaluation.py: Evaluate the performance of the trained models using various metrics.
 - hyperparameter_tuning.py: Fine-tune the hyperparameters of the selected model.
@@ -50,9 +96,23 @@ We will procure publicly available stock information directly from Yahoo Finance
 - matplotlib
 - seaborn
 
+## Necessary GitBash Commands
+
+```bash
+pip install yahoo_fin
+```
+
+```bash
+pip install yfinance
+```
+
+```bash
+pip install finnhub-python
+```
+
 ## How to Run
 - Clone the repository.
-- Install the required dependencies using pip install -r requirements.txt.
+- Install the required dependencies using ``` pip install -r requirements.txt.``` 
 - Run the scripts in the specified order as outlined in the methodology.
 
 ## Results
