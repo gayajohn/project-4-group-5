@@ -30,6 +30,8 @@ We will procure publicly available stock information directly from Yahoo Finance
 
 ## Data Procurement:
 
+[Data Procurement](https://github.com/gayajohn/project-4-group-5/blob/jasmine/data_procurement%20-%20JB.ipynb)
+
 **1. Ticker List Generation**
 
 - Created a list of tickers from the NASDAQ screener, including only American stocks categorized as mega, large, and mid-cap.
@@ -72,10 +74,11 @@ We will procure publicly available stock information directly from Yahoo Finance
 
 ## Data Exploration 
 
+[Data Exploration]()
 
 ## Repository Structure
 - data_procurement.ipynb: Python script to fetch and collect data from Yahoo Finance.
-- feature_engineering.py: Perform feature engineering to enhance the dataset for machine learning.
+- data_exploration: Jupyter notebook focused on exploring the collected financial data.
 - model_training.py: Implement and train multiple machine learning models.
 - model_evaluation.py: Evaluate the performance of the trained models using various metrics.
 - hyperparameter_tuning.py: Fine-tune the hyperparameters of the selected model.
