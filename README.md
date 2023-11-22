@@ -1,4 +1,4 @@
-# Stock Price Prediction with Machine Learning
+# Stock Price Movement Prediction with Machine Learning
 
 ## Objective
 The objective of this project is to utilize monthly stock data obtained from Yahoo Finance, including company financials, price and return, analyst ratios, etc. Our goal is to predict whether the stock price will increase, decrease, or remain the same in the next month. We aim to achieve this by employing various machine learning models and selecting the one that yields the highest accuracy. Additionally, we will perform hyperparameter tuning to further optimize the chosen model's performance.
@@ -6,19 +6,17 @@ The objective of this project is to utilize monthly stock data obtained from Yah
 ![image](https://github.com/gayajohn/project-4-group-5/assets/135666038/1ee1d17b-b082-4bea-be85-d193cc69cba3)
 
 ## Dataset
-We will procure publicly available stock information directly from Yahoo Finance using the YFinance library and finnhub.io in Python. This dataset will include a range of features such as historical stock prices, financial indicators, and analyst ratios.
+We will procure publicly available stock information directly from Yahoo Finance using the YFinance library in Python. This dataset will include a range of features such as historical stock prices, financial indicators, and analyst ratios.
 
 ![image](https://github.com/gayajohn/project-4-group-5/assets/135666038/338e4033-5d0c-452c-82dc-5a58770e9bd6)
-![image](https://github.com/gayajohn/project-4-group-5/assets/135666038/0bd00e12-a6a5-4494-90a9-4b99b69364bf)
+
 
 ## Methodology
-- Data Collection: Use the YFinance library to fetch monthly stock data from Yahoo Finance for the selected companies.
+- Data Collection: Use the YFinance library to fetch monthly stock data from Yahoo Finance.
 
 - Data Cleaning and Pre-processing: Clean the obtained data, handle missing values, and preprocess features for machine learning input.
 
-- Feature Engineering: Extract relevant features and create new ones that might enhance predictive power.
-
-- Model Selection: Implement multiple machine learning models such as Decision Trees, Random Forest, Support Vector Machines, and Neural Networks.
+- Model Selection: Implement multiple machine learning models such as Decision Trees, Random Forest, Support Vector Machines, Neural Networks.
 
 - Model Evaluation: Assess the performance of each model using appropriate evaluation metrics, such as accuracy, precision, recall, and F1 score.
 
