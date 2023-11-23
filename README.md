@@ -14,7 +14,10 @@ However, it is important to note, while machine learning models offer valuable i
 
 ## Repository Structure
 
-
+- data_files: folder that contains .csv files that are relevant to our data
+- data_procurement.ipynb: script to generate data
+- data_exploration.ipynb: script to explore data
+- ml_codes_compiled.ipynb: script that runs machine learning models
 
 ## The Data
 
