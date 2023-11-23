@@ -30,18 +30,23 @@ In order to ensure data availability:
 In order to get an extensive picture of the market, and gather all the relevant data to make our predictions, we needed to use multiple sources of data so that we get it for free.
 
 - Stock Screening
+  
 We screened North American stocks, that are Large Cap in nature using NASDAQ's free stock screener.
 
 - Stock Price Information
+  
 We used a library on Python called Yahoo_fin, that scrapes Yahoo Finance. We can get price, return and volatility for this database.
 
 - Company Financials
+  
 We used chromedriver to scrape a website called stockanalysis.come, where we could find financial statements for each stock. We used most recent quarterly reports to get the financial ratios for our data.
 
 - Economic Indicators
+  
 We used Alphavantage's API to access economic indicators for the given time period. This API is directly linked to FRED or the Federal Economic Database.
 
 - Technical Indicators
+  
 We used Finnhub.io's API to access technical indicators for each stock. They also have a python library.
 
 ## Data Exploration
@@ -87,23 +92,23 @@ The stock dataset has 1914 records, each with 23 attributes.
 
 The data is distributed evenly between 1 and 0.
 
-![Alt text](image.png)
+![image](https://github.com/gayajohn/project-4-group-5/assets/135036996/d918106a-e17a-4645-b1c8-3b8153743ea1)
 
 ### Distribution of data by Industry
 
-![Alt text](image-2.png)
+![image-1](https://github.com/gayajohn/project-4-group-5/assets/135036996/cdb98b96-e57c-410a-aa05-80e980e9507d)
 
 ### Feature Distribution
 
-![Alt text](image-3.png)
+![image-3](https://github.com/gayajohn/project-4-group-5/assets/135036996/fcdd1c4f-36f2-447a-afbd-ca0ab96c1f47)
 
 ### Feature Correlation Matrix
 
-![Alt text](image-4.png)
+![image-4](https://github.com/gayajohn/project-4-group-5/assets/135036996/9b54d189-c2c6-45e3-874c-accf7dcd6f6b)
 
 ### Feature Skewness
 
-![Alt text](image-5.png)
+![image-5](https://github.com/gayajohn/project-4-group-5/assets/135036996/4227d625-22d8-421e-90af-5e497eaa5b02)
  
 ## Machine Learning Models
 
@@ -127,7 +132,7 @@ We performed the following steps:
 
 RF Accuracy: 0.5031315240083507
 
-![Alt text](image-6.png)
+![image-6](https://github.com/gayajohn/project-4-group-5/assets/135036996/9f95fba9-edb3-49f0-ad51-41d95a9a0da9)
 
 Random Forest Classification Report: Training Data
 ---------------------------------------------------
@@ -137,8 +142,7 @@ Random Forest Classification Report: Training Data
            1       1.00      1.00      1.00       753
 
     accuracy                           1.00      1435
-   macro avg       1.00      1.00      1.00      1435
-weighted avg       1.00      1.00      1.00      1435
+ 
 
 
 Random Forest Classification Report: Testing Data
@@ -149,8 +153,7 @@ Random Forest Classification Report: Testing Data
            1       0.54      0.58      0.56       259
 
     accuracy                           0.50       479
-   macro avg       0.50      0.50      0.50       479
-weighted avg       0.50      0.50      0.50       479
+ 
 
 We can see a clear overfitting problem here
 
@@ -158,7 +161,7 @@ We can see a clear overfitting problem here
 
 XGB Accuracy (Binary Classification): 0.5615866388308977
 
-![Alt text](image-7.png)
+![image-7](https://github.com/gayajohn/project-4-group-5/assets/135036996/8c9c3bae-cd61-48f1-8a62-741513f38264)
 
 XGBoost Classification Report: Training Data
 ---------------------------------------------
@@ -168,8 +171,6 @@ XGBoost Classification Report: Training Data
            1       1.00      1.00      1.00       753
 
     accuracy                           1.00      1435
-   macro avg       1.00      1.00      1.00      1435
-weighted avg       1.00      1.00      1.00      1435
 
 
 XGBoost Classification Report: Testing Data
@@ -180,8 +181,7 @@ XGBoost Classification Report: Testing Data
            1       0.54      0.58      0.56       259
 
     accuracy                           0.50       479
-   macro avg       0.50      0.50      0.50       479
-weighted avg       0.50      0.50      0.50       479
+ 
 
 Here too, there's an overfitting problem
 
@@ -190,35 +190,36 @@ Here too, there's an overfitting problem
 We used sigmoid as the output layer's activation function as it's ideal for binary classification.
 
 **Model 1**
-_________________________________________________________________
- Layer (type)                Output Shape              Param #   
-=================================================================
- dense_12 (Dense)            (None, 80)                2800      
+    
+    Layer (type)                Output Shape              Param #   
+    =================================================================
+
+    dense_12 (Dense)            (None, 80)                2800      
                                                                  
- dense_13 (Dense)            (None, 30)                2430      
+    dense_13 (Dense)            (None, 30)                2430      
                                                                  
- dense_14 (Dense)            (None, 20)                620       
+    dense_14 (Dense)            (None, 20)                620       
                                                                  
- dense_15 (Dense)            (None, 1)                 21        
+    dense_15 (Dense)            (None, 1)                 21        
                                                                  
-=================================================================
+    =================================================================
 
 Loss: 3.4279682636260986, Accuracy: 0.519832968711853
 
 **Model 2**
 
-_________________________________________________________________
- Layer (type)                Output Shape              Param #   
-=================================================================
- dense_16 (Dense)            (None, 100)               3500      
+    
+    Layer (type)                Output Shape              Param #   
+    =================================================================
+     dense_16 (Dense)            (None, 100)               3500      
                                                                  
- dense_17 (Dense)            (None, 60)                6060      
+     dense_17 (Dense)            (None, 60)                6060      
                                                                  
- dense_18 (Dense)            (None, 30)                1830      
+     dense_18 (Dense)            (None, 30)                1830      
                                                                  
- dense_19 (Dense)            (None, 1)                 31        
+     dense_19 (Dense)            (None, 1)                 31        
                                                                  
-=================================================================
+    =================================================================
 
 Loss: 1.9603184461593628, Accuracy: 0.5407097935676575
 
@@ -226,7 +227,7 @@ Loss: 1.9603184461593628, Accuracy: 0.5407097935676575
 
 LR Accuracy: 0.5323590814196242
 
-![Alt text](image-8.png)
+![image-8](https://github.com/gayajohn/project-4-group-5/assets/135036996/34ef962a-0cb9-4581-b8d3-a8927ed53955)
 
 Logistic Regression Classification Report: Training Data
 ----------------------------------------------------------
@@ -236,8 +237,7 @@ Logistic Regression Classification Report: Training Data
            1       1.00      1.00      1.00       753
 
     accuracy                           1.00      1435
-   macro avg       1.00      1.00      1.00      1435
-weighted avg       1.00      1.00      1.00      1435
+   
 
 
 Logistic Regression Classification Report: Testing Data
@@ -248,8 +248,7 @@ Logistic Regression Classification Report: Testing Data
            1       0.56      0.68      0.61       259
 
     accuracy                           0.53       479
-   macro avg       0.52      0.52      0.51       479
-weighted avg       0.52      0.53      0.52       479
+   
 
 Another case of over-fitting.
 
@@ -257,7 +256,7 @@ Another case of over-fitting.
 
 LDA Accuracy: 0.5302713987473904
 
-![Alt text](image-9.png)
+![image-9](https://github.com/gayajohn/project-4-group-5/assets/135036996/e08b3042-af90-4455-99a6-cfd3b1d34362)
 
 Linear Discriminant Analysis Classification Report: Training Data
 -------------------------------------------------------------------
@@ -267,8 +266,7 @@ Linear Discriminant Analysis Classification Report: Training Data
            1       0.55      0.69      0.61       753
 
     accuracy                           0.54      1435
-   macro avg       0.54      0.54      0.53      1435
-weighted avg       0.54      0.54      0.53      1435
+   
 
 
 Linear Discriminant Analysis Classification Report: Testing Data
@@ -279,15 +277,13 @@ Linear Discriminant Analysis Classification Report: Testing Data
            1       0.55      0.68      0.61       259
 
     accuracy                           0.53       479
-   macro avg       0.52      0.52      0.51       479
-weighted avg       0.52      0.53      0.52       479
-
+  
 
 #### 6. Neural Network (MLP)
 
 MLP Accuracy: 0.5177453027139874
 
-![Alt text](image-10.png)
+![image-10](https://github.com/gayajohn/project-4-group-5/assets/135036996/eed7e060-5b21-47bf-8e05-76de9d35754c)
 
 Multi-layer Perceptron Classification Report: Training Data
 -------------------------------------------------------------
@@ -297,8 +293,7 @@ Multi-layer Perceptron Classification Report: Training Data
            1       0.93      0.94      0.93       753
 
     accuracy                           0.93      1435
-   macro avg       0.93      0.93      0.93      1435
-weighted avg       0.93      0.93      0.93      1435
+
 
 
 Multi-layer Perceptron Classification Report: Testing Data
@@ -309,8 +304,6 @@ Multi-layer Perceptron Classification Report: Testing Data
            1       0.55      0.56      0.56       259
 
     accuracy                           0.52       479
-   macro avg       0.51      0.51      0.51       479
-weighted avg       0.52      0.52      0.52       479
 
 Overfitting observed.
 
@@ -320,7 +313,7 @@ A quick loop showed us the optimal n_neighbours to be 1.
 
 KNN Accuracy: 0.5532359081419624
 
-![Alt text](image-11.png)
+![image-11](https://github.com/gayajohn/project-4-group-5/assets/135036996/f100b62a-7791-4afe-90b4-dcc72aa1dd2d)
 
 K-Nearest Neighbors Classification Report: Training Data
 ----------------------------------------------------------
@@ -330,8 +323,7 @@ K-Nearest Neighbors Classification Report: Training Data
            1       1.00      1.00      1.00       753
 
     accuracy                           1.00      1435
-   macro avg       1.00      1.00      1.00      1435
-weighted avg       1.00      1.00      1.00      1435
+
 
 
 K-Nearest Neighbors Classification Report: Testing Data
@@ -342,14 +334,12 @@ K-Nearest Neighbors Classification Report: Testing Data
            1       0.59      0.58      0.59       259
 
     accuracy                           0.55       479
-   macro avg       0.55      0.55      0.55       479
-weighted avg       0.55      0.55      0.55       479
 
 #### 8. Decision Tree Algorithm (DT) 
 
 DT Accuracy: 0.5052192066805845
 
-![Alt text](image-12.png)
+![image-12](https://github.com/gayajohn/project-4-group-5/assets/135036996/0f86a194-2fd0-46a8-b11f-4d4f865c8814)
 
 Decision Tree Classification Report: Training Data
 ---------------------------------------------------
@@ -359,8 +349,7 @@ Decision Tree Classification Report: Training Data
            1       0.55      0.48      0.51       753
 
     accuracy                           0.52      1435
-   macro avg       0.52      0.52      0.52      1435
-weighted avg       0.52      0.52      0.52      1435
+
 
 
 Decision Tree Classification Report: Testing Data
@@ -371,15 +360,13 @@ Decision Tree Classification Report: Testing Data
            1       0.55      0.49      0.52       259
 
     accuracy                           0.51       479
-   macro avg       0.51      0.51      0.50       479
-weighted avg       0.51      0.51      0.51       479
 
 
 #### 9. Bagging Decision Tree (BGT)
 
 BGT Accuracy: 0.5052192066805845
 
-![Alt text](image-13.png)
+![image-13](https://github.com/gayajohn/project-4-group-5/assets/135036996/b228d6ab-c466-4d21-9ce4-a299a0462f47)
 
 Bagging Decision Tree Classification Report: Training Data
 ---------------------------------------------------
@@ -389,8 +376,7 @@ Bagging Decision Tree Classification Report: Training Data
            1       1.00      0.98      0.99       753
 
     accuracy                           0.99      1435
-   macro avg       0.99      0.99      0.99      1435
-weighted avg       0.99      0.99      0.99      1435
+
 
 
 Bagging Decision Tree Classification Report: Testing Data
@@ -401,8 +387,7 @@ Bagging Decision Tree Classification Report: Testing Data
            1       0.56      0.46      0.50       259
 
     accuracy                           0.51       479
-   macro avg       0.51      0.51      0.51       479
-weighted avg       0.52      0.51      0.51       479
+
 
 Still seeing overfitting.
 
@@ -410,7 +395,7 @@ Still seeing overfitting.
 
 GBT Accuracy: 0.5156576200417536
 
-![Alt text](image-14.png)
+![image-14](https://github.com/gayajohn/project-4-group-5/assets/135036996/64051ba2-036c-43ab-8e26-e73479ffba52)
 
 Gradient Boosting Classification Report: Training Data
 -------------------------------------------------------
@@ -420,8 +405,7 @@ Gradient Boosting Classification Report: Training Data
            1       0.55      0.48      0.51       753
 
     accuracy                           0.52      1435
-   macro avg       0.52      0.52      0.52      1435
-weighted avg       0.52      0.52      0.52      1435
+
 
 
 Gradient Boosting Classification Report: Testing Data
@@ -432,14 +416,13 @@ Gradient Boosting Classification Report: Testing Data
            1       0.55      0.49      0.52       259
 
     accuracy                           0.51       479
-   macro avg       0.51      0.51      0.50       479
-weighted avg       0.51      0.51      0.51       479
+
 
 #### 11. Support Vector Machine (SVM)
 
 SVM Accuracy: 0.53
 
-![Alt text](image-15.png)
+![image-15](https://github.com/gayajohn/project-4-group-5/assets/135036996/d4b99466-5945-4b05-b289-994cb06bced8)
 
 
 Support Vector Machine Classification Report: Training Data
@@ -450,8 +433,7 @@ Support Vector Machine Classification Report: Training Data
            1       0.60      0.83      0.69       753
 
     accuracy                           0.62      1435
-   macro avg       0.63      0.60      0.59      1435
-weighted avg       0.63      0.62      0.59      1435
+
 
 
 Support Vector Machine Classification Report: Testing Data
@@ -462,15 +444,14 @@ Support Vector Machine Classification Report: Testing Data
            1       0.55      0.75      0.63       259
 
     accuracy                           0.53       479
-   macro avg       0.51      0.51      0.49       479
-weighted avg       0.52      0.53      0.50       479
+
 
 
 #### 12. Naive Bayes Classifier (NB) 
 
 NB Accuracy: 0.46346555323590816
 
-![Alt text](image-16.png)
+![image-16](https://github.com/gayajohn/project-4-group-5/assets/135036996/1c565b9a-b0a2-4eee-b8e7-5febb6ff34a2)
 
 Naive Bayes Classification Report: Training Data
 ---------------------------------------------------
@@ -480,8 +461,7 @@ Naive Bayes Classification Report: Training Data
            1       0.73      0.08      0.14       753
 
     accuracy                           0.50      1435
-   macro avg       0.61      0.52      0.39      1435
-weighted avg       0.61      0.50      0.38      1435
+
 
 
 Naive Bayes Classification Report: Testing Data
@@ -492,12 +472,11 @@ Naive Bayes Classification Report: Testing Data
            1       0.54      0.05      0.09       259
 
     accuracy                           0.46       479
-   macro avg       0.50      0.50      0.36       479
-weighted avg       0.50      0.46      0.33       479
+
 
 ### Comparing Accuracy Scores
 
-![Alt text](image-17.png)
+![image-16](https://github.com/gayajohn/project-4-group-5/assets/135036996/362cb01f-297a-4a92-ba9e-d549839d9c4c)
 
 ## Attempting to Optimize Model
 
@@ -511,7 +490,7 @@ The XGboost model has achieved the highest accuracy among all the models. Now we
 
 In our task we will identify which features were the most valuable for our model. In our first step we will check if by any chance we can increase the accuracy of our model extracting a feature.
 
-![Alt text](image-18.png)
+![image-18](https://github.com/gayajohn/project-4-group-5/assets/135036996/678e52f3-cb9f-4e33-8ec9-48638f252c5e)
 
 #### Using Feature Importance to Reduce Chart Dimenstionality
 
@@ -537,7 +516,7 @@ XGB Accuracy (Binary Classification) using top 15 features: 0.5365344467640919
 
 ## Charting Our Tuning Efforts
 
-![Alt text](image-19.png)
+![image-19](https://github.com/gayajohn/project-4-group-5/assets/135036996/b76d8d23-78ea-48b3-ae85-5be8c0f2c4c7)
 
 ## Summarizing Results
 
