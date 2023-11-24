@@ -1,4 +1,4 @@
-# Predicting Short-Term Stock Price Movement with Machine Learning
+# Project 4: Predicting Stock Price Movement with Machine Learning
 
 ## The Objective
 
@@ -18,6 +18,7 @@ However, it is important to note, while machine learning models offer valuable i
 - data_procurement.ipynb: script to generate data
 - data_exploration.ipynb: script to explore data
 - ml_codes_compiled.ipynb: script that runs machine learning models
+- slides.pdf: presentation slides
 
 ## The Data
 
