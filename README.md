@@ -1,4 +1,4 @@
-# Project 4: Predicting Stock Price Movement with Machine Learning
+# Predicting Short-Term Stock Price Movement with Machine Learning
 
 ## The Objective
 
